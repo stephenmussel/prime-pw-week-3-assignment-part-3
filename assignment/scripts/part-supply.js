@@ -55,11 +55,20 @@ for ( quantity of supplyChanges ) {
 }
 
 // 8. Rewrite the `for` loop from #6 as a `while` loop.
+// starts at 0
+// finishes at 6 (total number of elements)
+// if element is > 0, log added...
+// if element is === 0, log nothing changed...
+// if element is < 0, log removed...
+
 let x = 0;
-while (x < supplyChanges.length){
-  console.log('Added', supplyChanges[x], 'parts.');
+while (x < supplyChanges.length) {
   x++;
+  if (supplyChanges[x] > 0) {
+    console.log('Added', supplyChanges[x], 'parts.');
+  }
 }
+
 
 /*
 for (var i=0; i<6; i++)
