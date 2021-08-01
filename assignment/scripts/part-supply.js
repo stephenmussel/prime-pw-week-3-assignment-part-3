@@ -73,7 +73,7 @@ while (x < supplyChanges.length) {
   } else if (supplyChanges[x] < 0) {
     console.log('Removed', supplyChanges[x], 'parts.');
   }
-  x++; // This has to be after the if...else statements in order for the loop to start at 0. if it's before, the loop starts at 1
+  x++; // This has to be after the if...else statement block in order for the loop to start at 0. if it's before (line 69), then the loop starts at 1
 }
 
 // 9. Write a loop to determine the total number of parts available by
