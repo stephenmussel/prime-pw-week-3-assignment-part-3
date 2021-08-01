@@ -1,4 +1,33 @@
 /* give your assignment a fun background color */
+/* This is the code block for my fun background color, but also I wanted show y'all something cool that I came across.
+
 body {
   background-color: Yellow;
+}
+
+*/
+
+/* SOURCE: https://codepen.io/hylobates-lar/pen/qBbQeON from Alison Quaglia. Below, I'll attempt to explain what I think the CSS is doing based on tweaking the property values and online research. */
+
+html, body {
+  width: 100%; /* Not entirely sure but, when I reduce it to 10%. 3 blocky vertical gradient screens run move back and forth instead of a smooth gradient */
+  height:100%; /* When I reduce it to 10%. 3 blocky horizontal gradient screens run move back and forth instead of a smooth gradient */
+}
+
+body {
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab); /* creates gradient and orients it at -45 deg with the listed colors   */
+    background-size: 400% 400%; /* I think this helps extend the animation beyond the screen so it looks fluid instead of choppy and abrupt */
+    animation: gradient 15s ease infinite; /* animation speed  */
+  }
+
+  @keyframes gradient { /* provides animation of colors so it appears seamless  */
+    0% {
+        background-position: 0% 50%; /* this provides the color transition with the first two colors  */
+    }
+    50% {
+        background-position: 100% 50%; /* this provides the color transition with the second and third colors */
+    }
+    100% {
+        background-position: 0% 50%; /* this provides the color transition with the third and fourth colors */
+    }
 }
